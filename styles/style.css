@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Common Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: "Jura", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+.center{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+/* End of Common Styles */
+/* Mouse circle */
+.mouse-circle,.mouse-dot{
+    border-radius: 50%;
+    position:fixed;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.mouse-circle{
+    width: 6rem;
+    height:6rem;
+    border: 0.1rem solid #c7a622 ;    
+    animation: mouseCircleAnim 7s infinite linear;
+        
+}
+.mouse-dot{
+    width: .5rem;
+    height: .5rem;
+    background-color: #9b0e0e;
+    animation: mouseDotAnim 7s infinite linear;
+    
+}
+@keyframes mouseCircleAnim{
+    0%{
+        width:6rem;
+        height:6rem;
+    }
+    25%{
+        width:8rem;
+        height:8rem;
+    }
+    35%{
+        width:4rem;
+        height:4rem;
+    }
+    70%{
+        width:8rem;
+        height:8rem;
+    }
+    100%{
+        width:6rem;
+        height:6rem;
+    }}
+
+    @keyframes mouseDotAnim{
+        0%{
+            width:2.5rem;
+            height:2.5rem;
+        }
+        55%{
+            width:1.5rem;
+            height:1.5rem;
+        }
+        100%{
+            width:2.5rem;
+            height:2.5rem;
+        }
+    }
+
+/* End of Mouse circle */
+/* page PG */
+.page-bg{
+    position: fixed;
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(29, 6, 6, 0.7)),url(../img/bg.jpg) center no-repeat;
+    background-size:cover ;
+}
+/* End of page PG */
+/* section 1 */
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   
+}
+/* Logo */
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+   
+}
+/* End of Logo */
+/* Animated circles */
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.main-circle{
+    width: 60rem;
+    height: 60rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.main-circle img{
+    mix-blend-mode:luminosity;
+    
+}
+/* End of animated circles */
+/*End of  section 1 */
